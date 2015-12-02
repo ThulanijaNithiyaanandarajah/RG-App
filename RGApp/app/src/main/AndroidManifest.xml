@@ -10,8 +10,6 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".home" >
         </activity>
-        <activity android:name=".home_page" >
-        </activity>
     </application>
 
 </manifest>
