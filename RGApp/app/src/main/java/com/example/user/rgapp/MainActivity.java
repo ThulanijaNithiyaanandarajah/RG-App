@@ -16,19 +16,46 @@ public class MainActivity extends Activity {
 }*/
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 
-public class MainActivity extends FragmentActivity {
-    static final int NUM_ITEMS = 6;
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        Button button;
+        Button cart;
+        //TextView tv;
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        button = (Button) findViewById(R.id.button);
+        cart = (Button) findViewById(R.id.shoppingct);
+        //tv = (TextView) findViewById(R.id.textView);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Categories.class);
+                startActivity(intent);
+            }
+        });
+
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CartView.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+    /*static final int NUM_ITEMS = 6;
     ImageFragmentPagerAdapter imageFragmentPagerAdapter;
     ViewPager viewPager;
     public static final String[] IMAGE_NAME = {"leaderboard_kellyfelder", "leaderboard_laptop_carnival", "leaderboard_tv", "ntb", "sampath", "sampath_emi",};
@@ -80,5 +107,5 @@ public class MainActivity extends FragmentActivity {
             swipeFragment.setArguments(bundle);
             return swipeFragment;
         }
-    }
+    }*/
 }
