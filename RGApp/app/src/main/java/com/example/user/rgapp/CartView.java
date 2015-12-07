@@ -1,7 +1,7 @@
 package com.example.user.rgapp;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -9,7 +9,7 @@ import android.webkit.WebViewClient;
 /**
  * Created by USER on 12/7/2015.
  */
-public class CartView extends ActionBarActivity{
+public class CartView extends AppCompatActivity{
 
     private WebView mWebView;
 
