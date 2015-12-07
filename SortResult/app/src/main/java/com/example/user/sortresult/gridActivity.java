@@ -1,5 +1,6 @@
 package com.example.user.sortresult;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,18 +19,23 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class gridActivity extends AppCompatActivity {
 
 
         GridView gridView;
-       String search_txt="tv";
-
+       public String search_txt;
+      ArrayList<Product> productList = new ArrayList<>();
         static final String[] numbers = new String[] {
                 "A", "B", "C", "D", "E",
                 "F", "G", "H", "I", "J",
@@ -39,12 +46,17 @@ public class gridActivity extends AppCompatActivity {
         TextView mTextView;
         String sub_link;
 
-        @Override
+
+
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_grid);
-            mTextView = (TextView) findViewById(R.id.textView);
+        mTextView = (TextView) findViewById(R.id.textView);
 
+
+           search_txt= getIntent().getExtras().getString("search_text");
             String url = "https://www.retailgenius.com/rg_api/get-items-for-search-results.php";
 
             CustomJSONObjectRequest jsObjRequest = new CustomJSONObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {
@@ -53,7 +65,18 @@ public class gridActivity extends AppCompatActivity {
 
 
                     try {
-                        mTextView.setText(response.toString());
+
+                        JSONObject sendResult = new JSONObject((response.toString()));
+                        productList =   getListFromJsonObject(sendResult);
+                       ListView listview = (ListView) findViewById(R.id.list);
+                        ItemListAdapter adapter = new ItemListAdapter(getApplicationContext(), R.layout.activity_view, productList);
+                        listview.setAdapter(adapter);
+
+                    //    String viewResult = productList.toString();
+
+
+                  //    mTextView.setText(response.toString());
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -111,6 +134,56 @@ public class gridActivity extends AppCompatActivity {
                 });
                 viewmode=1;
             } */
+          public static ArrayList<Product> getListFromJsonObject(JSONObject jObject) throws JSONException {
+              ArrayList<Product> return_list = new ArrayList<Product>();
+              JSONArray dataArray =  jObject.getJSONArray("data");
+              for (int i = 0; i < dataArray.length(); i++)
+              {
+                  String item_name=dataArray.getJSONObject(i).getString("item_name");
+                  String item_price = dataArray.getJSONObject(i).getString("item_price");
+                  String unique_id = dataArray.getJSONObject(i).getString("unique_id");
+                  String item_discount = dataArray.getJSONObject(i).getString("item_discount");
+                  return_list.add(new Product(item_name,item_price,item_discount,unique_id));
 
+              }
+
+              return return_list;
+
+
+          }
+
+
+
+    public static Object convertJsonItem(Object o) throws JSONException {
+        if (o == null) {
+            return "null";
+        }
+
+        if (o instanceof JSONObject) {
+            return getListFromJsonObject((JSONObject) o);
+        }
+
+
+        if (o.equals(Boolean.FALSE) || (o instanceof String &&
+                ((String) o).equalsIgnoreCase("false"))) {
+            return false;
+        }
+
+        if (o.equals(Boolean.TRUE) || (o instanceof String && ((String) o).equalsIgnoreCase("true"))) {
+            return true;
+        }
+
+        if (o instanceof Number) {
+            return o;
+        }
+
+        return o.toString();
     }
+
+
+
+
+
+
+}
 

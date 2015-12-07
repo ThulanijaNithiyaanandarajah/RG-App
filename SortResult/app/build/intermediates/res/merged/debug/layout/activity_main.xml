@@ -9,16 +9,30 @@
 
     <TextView android:text="@string/textView" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+
+        android:textSize="30sp"
+
+        android:layout_above="@+id/editText"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button"
         android:id="@+id/button"
-        android:layout_marginTop="96dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClick" />
-</RelativeLayout>
-<!-- From: file:/F:/SortResult/app/src/main/res/layout/activity_main.xml -->
+        android:onClick="onClick"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:width="250dp"
+
+        android:inputType="text"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout><!-- From: file:/F:/SortResult/app/src/main/res/layout/activity_main.xml -->

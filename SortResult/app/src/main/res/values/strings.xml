@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">SortResult</string>
-    <string name="textView">Sort!</string>
-    <string name="button">Sort</string>
+    <string name="app_name">Search</string>
+    <string name="textView">Search</string>
+    <string name="button">search</string>
+    <string name="EditText"></string>
+    <string name="img">img</string>
 </resources>

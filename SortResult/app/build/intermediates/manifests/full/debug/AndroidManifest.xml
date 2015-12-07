@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="com.example.user.sortresult.gridActivity" >
         </activity>
+        <activity android:name="com.example.user.sortresult.ProductActivity" >
+        </activity>
     </application>
 
 </manifest>
