@@ -43,7 +43,7 @@ public class CategoryListAdapter extends BaseExpandableListAdapter {
 
         final SubCategory subCategory = (SubCategory) getChild(groupPosition, childPosition);
 
-        //final String childText = (String) getChild(groupPosition, childPosition);
+        // final String childText = (String) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

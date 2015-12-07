@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * Created by USER on 11/30/2015.
  */
-public class Categories extends AppCompatActivity {
+public class Categories extends AppCompatActivity{
 
     private ExpandableListView expandableListView;
     CategoryListAdapter categoryListAdapter;
