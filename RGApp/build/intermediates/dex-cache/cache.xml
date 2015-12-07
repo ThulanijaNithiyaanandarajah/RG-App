@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\classes-5d748692d03f44c62008298e1a382fda0da4c744.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\classes-f04eb46f13d3109f7be6f4624d085ad3e933adb3.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\libs\org.apache.servicemix.bundles.httpcore-4.0-alpha6_1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8b75a5101074d104aaa400c0a0cbbad597478218">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\org.apache.servicemix.bundles.httpcore-4.0-alpha6_1-a30863a457f20de3e857b751477135e35e39e086.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-e60d8ade1263d3fb78603d92ebe36f0279be405c.jar" />
+    </item>
+    <item
+        jar="C:\Users\USER\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.4\dd9eeb557650c4ad7394df23f0f5cf27a7cfc697\universal-image-loader-1.9.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="dd9eeb557650c4ad7394df23f0f5cf27a7cfc697">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.4-fb40078b9fa878a6ac7dcc25c76e3e25859a9d08.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\libs\httpclient-4.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c40b61d8f72c51fb403f1ff2bab0b20b72beea2c">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\httpclient-4.0-beta1-58665b78a796f811015a256002da6e4ae1e78ad6.jar" />
+    </item>
+    <item
+        jar="C:\Users\USER\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-e1bada319d070ee4a02377a7284fdaaac3479867.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="F:\AndroidProject\RG\RG-App\RGApp\app\build\intermediates\pre-dexed\debug\classes-dedbca7df736d40b4207917d0e0d1cfbb98463c2.jar" />
+    </item>
+
+</items>
