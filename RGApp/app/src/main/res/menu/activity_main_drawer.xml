@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+    </group>
+
+    <item android:title="Shop by category">
+
+            <item
+                android:id="@+id/Electronics"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Electronics" />
+            <item
+                android:id="@+id/Fashion_and_Lifestyle"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Fashion and Lifestyle" />
+            <item
+                android:id="@+id/Home_Needs"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Home Needs" />
+
+    </item>
+
+</menu>

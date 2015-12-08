@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import java.util.Arrays;
-
 /**
  * Created by USER on 12/7/2015.
  */
@@ -16,11 +14,8 @@ public class ImageAdapter extends PagerAdapter {
     Context context;
     private int[] GalImages = new int[] {
             R.drawable.com,
-       //     R.drawable.leaderboard_kellyfelder,
-         //   R.drawable.leaderboard_tv,
-           // R.drawable.ntb,
-             R.drawable.sampath
-
+            R.drawable.leaderboard_kellyfelder,
+            R.drawable.leaderboard_tv
     };
     ImageAdapter(Context context){
         this.context=context;
