@@ -35,4 +35,4 @@
         android:inputType="text"
         android:layout_above="@+id/button"
         android:layout_centerHorizontal="true" />
-</RelativeLayout><!-- From: file:/F:/SortResult/app/src/main/res/layout/activity_main.xml -->
+</RelativeLayout><!-- From: file:/F:/RGApp/SortResult/app/src/main/res/layout/activity_main.xml -->

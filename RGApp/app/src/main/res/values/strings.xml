@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">SortResult</string>
-    <string name="textView">Sort!</string>
-    <string name="button">Sort</string>
+    <string name="app_name">RGApp</string>
+    <string name="img">img</string>
 </resources>
