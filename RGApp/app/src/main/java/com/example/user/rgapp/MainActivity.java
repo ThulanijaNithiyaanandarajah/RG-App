@@ -19,17 +19,26 @@ public class MainActivity extends Activity {
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
+    ListView listview;
+    TrendingSliderAdapter adapter;
+    ViewPager viewPager;
+    ArrayList<Product> listItem;
+
+    Button button;
+    Button cart;
+    //TextView tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Button button;
-        Button cart;
-        //TextView tv;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -37,6 +46,14 @@ public class MainActivity extends Activity {
         button = (Button) findViewById(R.id.button);
         cart = (Button) findViewById(R.id.shoppingct);
         //tv = (TextView) findViewById(R.id.textView);
+
+        //listItem = new ArrayList<product>();
+        //new TrendAsyncTask().execute("http://www.retailgenius.com/cms/xml/trending_items.xml");
+
+        viewPager = (ViewPager)findViewById(R.id.slide);
+
+        //adapter = new TrendingSliderAdapter(this, listItem);
+        //viewPager.setAdapter(adapter);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +72,59 @@ public class MainActivity extends Activity {
         });
 
     }
+
+    /*public class TrendAsyncTask extends AsyncTask<String, Void, Boolean> {
+
+        ProgressDialog dialog;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog = new ProgressDialog(MainActivity.this);
+            dialog.setMessage("Loading, please wait");
+            dialog.setTitle("Connecting server");
+            dialog.show();
+            dialog.setCancelable(false);
+        }
+
+        @Override
+        protected Boolean doInBackground(String... params) {
+
+            XMLParser parser = new XMLParser();
+
+            try {
+                String xml = parser.getXmlFromUrl(params[0]); // getting XML
+                Document doc = parser.getDomElement(xml); // getting DOM element
+
+                NodeList nl = doc.getElementsByTagName("row");
+                for (int i = 0; i < nl.getLength(); i++) {
+                    Element e = (Element) nl.item(i);
+
+                    NodeList cl = e.getChildNodes();
+
+                    String unique_id = ((Element)cl.item(0)).getAttribute("unique_id");
+                    String item_name = ((Element)cl.item(1)).getAttribute("item_name");
+                    String item_price = ((Element)cl.item(2)).getAttribute("item_price");
+                    String item_discount = ((Element)cl.item(3)).getAttribute("item_discount");
+                        Product product = new Product(unique_id, item_name, item_price, item_discount);
+                        listItem.add(product);
+
+                    System.out.print(listItem);
+                }
+            }catch (Exception e1){
+                e1.printStackTrace();
+            }
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            dialog.cancel();
+            adapter.notifyDataSetChanged();
+            if(result == false)
+                Toast.makeText(getApplicationContext(), "Unable to fetch data from server", Toast.LENGTH_LONG).show();
+        }
+    }*/
     /*static final int NUM_ITEMS = 6;
     ImageFragmentPagerAdapter imageFragmentPagerAdapter;
     ViewPager viewPager;
